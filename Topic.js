@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/news-app");
-mongoose.set("debug", true);
+//mongoose.set("debug", true);
 mongoose.Promise = Promise;
 
 const topicSchema = new mongoose.Schema({
     url: String,
+    domain: String,
     title: String,
     date: {type: Date}
 });

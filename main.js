@@ -4,6 +4,8 @@ const {
     utils: { log },
 } = Apify;
 
+//log.setLevel(log.LEVELS.DEBUG);
+
 Apify.main(async () => {
     log.info('Starting actor.');
     const requestList = await Apify.openRequestList('main', await tools.getSources());
@@ -12,7 +14,7 @@ Apify.main(async () => {
 
     log.debug('Setting up crawler.');
     const crawler = new Apify.CheerioCrawler({
-        maxRequestsPerCrawl: 5,
+        //maxRequestsPerCrawl: 50,
         requestList,
         requestQueue,
         handlePageFunction: async context => {
