@@ -4,7 +4,7 @@ const {
     utils: { log },
 } = Apify;
 
-//log.setLevel(log.LEVELS.DEBUG);
+log.setLevel(log.LEVELS.DEBUG);
 
 Apify.main(async () => {
     log.info('Starting actor.');
